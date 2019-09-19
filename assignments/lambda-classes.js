@@ -30,7 +30,7 @@ class Instructor extends Person {
         return (`Today we are learning about ${subject}.`)
     }
     grade(student, subject){
-        return (`${this.name} receives a perfect score on ${subject}`)
+        return (`${student.name} receives a perfect score on ${subject}`)
     }
     
 }
@@ -41,6 +41,7 @@ class Student extends Person {
         this.previousBackground = studentAttrs.previousBackground;
         this.className = studentAttrs.className;
         this.favSubjects = studentAttrs.favSubjects;
+        this.grade = studentAttrs.grade;
     }
     listsSubjects(){
         return  (`${this.favSubjects}`)
@@ -97,9 +98,9 @@ const fred = new Instructor({
   });
 
   console.log(fred.name)
-  console.log(fred.speak)
-  console.log(fred.demo)
-  console.log(fred.grade)
+  console.log(fred.speak())
+  console.log(fred.demo())
+  console.log(pebbles.grade)
   console.log(wilma.standUp())
   console.log(wilma.debugsCode(wilma.name, pebbles.name, pebbles.favSubjects))
   console.log(pebbles.listsSubjects());
