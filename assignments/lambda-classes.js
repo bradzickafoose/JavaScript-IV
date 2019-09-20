@@ -30,7 +30,7 @@ class Instructor extends Person {
         return (`Today we are learning about ${subject}.`)
     }
     grade(student, subject){
-        return (`${student.name} receives a perfect score on ${subject}`)
+        return (`${this.name} receives a perfect score on ${subject}`)
     }
     
 }
@@ -64,7 +64,7 @@ class ProjectManager extends Instructor {
         return (`${this.name} announces to {channel}, @channel standy times!​​​​​`)
     }
     debugsCode(name,student,subject){
-        return (`${name} debugs ${student}'s code on ${subject}`)
+        return (`${this.name} debugs code.`)
     }
 }
 
@@ -102,8 +102,26 @@ const fred = new Instructor({
   console.log(fred.demo())
   console.log(pebbles.grade)
   console.log(wilma.standUp())
-  console.log(wilma.debugsCode(wilma.name, pebbles.name, pebbles.favSubjects))
+  console.log(wilma.debugsCode())
   console.log(pebbles.listsSubjects());
   console.log(pebbles.PRAssignment());
   console.log(pebbles.sprintChallenge());
 
+  pandora = [{
+    "town" : "FireStone",
+    "population" : 5,
+    },
+    {
+    "town" : "Dog Town",
+    "population" : 7,
+    },
+    {
+    "town" : "Bandit Village",
+    "population" : 10,
+    }]
+    const lowerCase = pandora.map(function(obj) {
+      return obj.town.toLowerCase();
+    });
+    console.log(lowerCase);
+
+    
